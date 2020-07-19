@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ordered List</title>
+        <link rel="stylesheet" type="text/css" href="food.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="addFood.js"></script>
+        <script>
+          $(document).ready(function(){
+            addJuice();
+            addPizza();
+            addCoffee();
+          });
+        </script>
+        <style>
+          * {box-sizing: border-box;}
+              
+          .main{
+              width: 100%;
+              height: auto;
+              background-image: url("wall.jpg");
+              background-repeat: no-repeat;
+              background-size: cover;
+          }  
+        </style>
+      </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="font-style: oblique;">
+        <a class="navbar-brand" href="main.html" style=" color:rgba(246, 75, 8, 0.876);">
+          OUR MENU
+          <img src="menu.png" style="width: 50px; height: 50px;">
+        </a>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgba(246, 75, 8, 0.876);">
+                  Category
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="juice.html"  style="color:rgba(246, 75, 8, 0.876);">Juice</a>
+                  <a class="dropdown-item" href="pizza.html"  style="color:rgba(246, 75, 8, 0.876);">Pizza</a>
+                  <a class="dropdown-item" href="coffee.html"  style="color:rgba(246, 75, 8, 0.876);">Coffee & Tea</a>
+                  
+                </div>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color:rgba(246, 75, 8, 0.876);" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Manage Food
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="addFood.html" style="color:rgba(246, 75, 8, 0.876);">Add Foods</a>
+                <a class="dropdown-item" href="foodList.html" style="color:rgba(246, 75, 8, 0.876);">Show Food Lists</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="orderedList.html" style="color:rgba(246, 75, 8, 0.876);">
+                Ordered lists
+              </a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      <div class="container-fluid main">
+        <h3 style="font-style: oblique; color:rgba(246, 75, 8, 0.876);">Available Foods</h3><br>
+        <div class="row">
+          <div class="col-sm-6" id="orderedContainer">
+           
+          </div>
+          <div class="col-sm-6">
+            <table class="table table-striped" id="orderTable" style="font-style: oblique;">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Description</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th>Cancel order</th>
+                </tr>
+              </thead>
+              <tbody>
+                        
+              </tbody>
+            </table>
+            <div class="float-sm-right">
+              <span id="total" style="font-style:oblique;">
+
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="float-sm-right">
+        <span id="total">
+
+        </span>
+      </div>
+      
+    </body>
+</html>
