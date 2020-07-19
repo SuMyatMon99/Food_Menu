@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {box-sizing: border-box;}
+            
+            .main{
+                width: 100%;
+                height: 600px;
+                background-image: url("leaf.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }  
+            .sec{
+                width: 40%;
+                left: 10%;
+                right:50%;
+                position: relative;
+                padding-top: 30px;
+            }
+
+
+        </style>
+        <title>Add Foods</title>
+       
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/yourcode.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="addFood.js"></script>
+        
+      </head>
+    <body>
+      
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="font-style: oblique;">
+        <a class="navbar-brand" href="main.html" style=" color:rgba(246, 75, 8, 0.876);">
+          OUR MENU
+          <img src="menu.png" style="width: 50px; height: 50px;">
+        </a>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgba(246, 75, 8, 0.876);">
+                  Category
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="juice.html"  style="color:rgba(246, 75, 8, 0.876);">Juice</a>
+                  <a class="dropdown-item" href="pizza.html"  style="color:rgba(246, 75, 8, 0.876);">Pizza</a>
+                  <a class="dropdown-item" href="coffee.html"  style="color:rgba(246, 75, 8, 0.876);">Coffee & Tea</a>
+                  
+                </div>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color:rgba(246, 75, 8, 0.876);" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Manage Food
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="addFood.html" style="color:rgba(246, 75, 8, 0.876);">Add Foods</a>
+                <a class="dropdown-item" href="foodList.html" style="color:rgba(246, 75, 8, 0.876);">Show Food Lists</a>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link" href="orderedList.html" style="color:rgba(246, 75, 8, 0.876);">
+                Ordered lists
+              </a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+    </div>
+
+
+        <div class="main">
+            <div class="sec">
+          
+                <div class="form-group" style="font-style: oblique; color:rgba(246, 75, 8, 0.876);">
+                  <label for="name" style="font-size: 20px; font-weight: bold;"></b>Name:</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter name..." name="name" style="font-style: oblique; color:rgba(246, 75, 8, 0.876);">
+               
+                  <label for="price" style="font-size: 20px; font-weight: bold;">Price:</label>
+                  <input type="text" class="form-control" id="price" placeholder="Enter price..." name="price" style="font-style: oblique; color:rgba(246, 75, 8, 0.876);">
+                
+                  <label for="image" style="font-size: 20px; font-weight: bold;">Image:</label>
+                  <select name="foodimage" class="custom-select mb-3" id="image" style="font-style: oblique; color:rgba(246, 75, 8, 0.876);">
+                    <option value="lemon.png">Lemon Juice</option>
+                    <option value="waterMelon.jpg">WaterMelon Juice</option>
+                    <option value="orange.jpg">Orange Juice</option>
+
+                    <option value="whitepizza.jpg">White Pizza</option>
+                    <option value="sausage.png">Sausage Pizza</option>
+                    <option value="seafoodpizza.jpg">Seafood Pizza</option>
+
+                    <option value="espresso.jpg">Espresso</option>
+                    <option value="cappuccino.jpg">Cappuccino</option>
+                    <option value="bubbletea.jpg">Bubble Tea</option>
+                    <option value="greentea.jpg">Green Tea</option>
+
+                  </select>
+                
+                  <label for="category" style="font-size: 20px; font-weight: bold;">Choose Categories:</label>
+                
+                  <select name="foodimage" class="custom-select mb-3" id="category" style="font-style: oblique; color:rgba(246, 75, 8, 0.876);">
+                    <option value="Juice">Juice</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Coffee">Coffee & Tea</option>
+                  </select>
+               
+                  <label for="description" style="font-size: 20px; font-weight: bold;">Description:</label>
+                  <textarea class="form-control rounded-0" id="tarea" rows="3" style="font-style: oblique; color:rgba(246, 75, 8, 0.876);"></textarea><br>
+                
+                  <button type="submit" class="btn btn-light" id="add" style="font-style: oblique; color:rgba(246, 75, 8, 0.876);">Add</button>
+                  <button type="submit" class="btn btn-light" id="update" style="font-style: oblique; color:rgba(246, 75, 8, 0.876);">Update</button>
+                  <input type="hidden" id="frm">
+                
+                </div>     
+            </div>    
+        </div>
+      
+      
+      <script>
+        var urlSearch=new URLSearchParams(window.location.search);
+        var f=urlSearch.get('id');
+        var n=urlSearch.get('name');
+        var p=urlSearch.get('price');
+        var i=urlSearch.get('image');
+        var cat=urlSearch.get('category');
+        var des=urlSearch.get('description');
+
+        $("#frm").val(f);
+        $("#name").val(n);
+        $("#price").val(p);
+        $("#image").val(i);
+        $("#category").val(cat);
+        $("#tarea").val(des);
+      </script>
+     
+    </body>
+</html>
